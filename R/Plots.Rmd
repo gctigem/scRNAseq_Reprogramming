@@ -1,0 +1,83 @@
+---
+title: "scRNA-seq data Reprogramming analysis"
+author: Francesco Panariello
+output:
+  html_notebook:
+    toc: true
+    toc_float: true
+    collapsed: false
+    theme: spacelab
+    highlight: tango
+    code_folding: hide
+    
+---
+
+This is an [R Markdown] containing the code to analyze single cell RNA-seq data from a time-course experiment of somatic human Reprogramming (Panariello et al., 2023)
+
+# Loading
+```{r}
+#Library loading
+
+library(ggplot2)
+library(ggridges)
+library(reshape2)
+library(matrixStats)
+library(xlsx)
+library(tidyr)
+library(pheatmap)
+
+
+# Data loading
+
+cells=readRDS("Data/filt_cmd_anlyzed.rds")
+mtx=readRDS("Data/filt_matrix_normalized.rds")
+pcas=
+```
+
+# Figure 1C - Expression of gene markers at different time-points
+
+```{r}
+# Create a vector containing gene markers to analyze
+genes=c("ANPEP", "SNAI2","FOXH1","LEFTY2","NANOG", "POU5F1","DPPA3","ALPPL2")
+
+# Create a data frame with expression values for marker genes at each time-point
+df=lapply(c("D0","D5","D9","D13"),function(x) {
+  ps=row.names(cells[cells$day==x,])
+  mtx=as.data.frame(as.matrix(mtx[rownames(mtx)%in%genes,colnames(mtx)%in%ps]))
+  mtx$genes=rownames(mtx)
+  res=melt(mtx,id.vars="genes")
+  res$genes=factor(res$genes, levels=genes)
+  return(res)
+})
+
+for(i in 1:length(df)){
+  print(ggplot(df[[i]], aes(x=genes, y=value,fill=genes)) +
+          geom_violin(color="black",alpha=.8,scale="width")+
+          theme_classic()+theme(panel.grid = element_blank(),legend.position = "none",axis.title = element_blank(),axis.text.x = element_blank())+
+          scale_x_discrete()+coord_cartesian(ylim = c(0,10.5))+scale_fill_brewer(palette = "Dark2"))
+}
+
+```
+
+
+# Figure 1D - FLE dimensionality reduction 
+
+```{r}
+palette=c('#e41a1c','#377eb8','#4ad962','#984ea3','#ff7f00','yellow3','#a65628','#f781bf')
+write.table(cells[,c("x","y","inter_clusters","day","cell_cycle")], "Fig13_SD_meta.txt",row.names = F, sep="\t",quote=F)
+ggplot(data = cells, aes_string(x = "x", y = "y", color="day")) +
+  geom_point(size = 0.5) + theme_classic() + 
+  theme(axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        axis.title = element_text(size=10),
+        panel.grid = element_blank(),
+        legend.title = element_blank(),
+        legend.text = element_text(size=10)) +
+  xlab("FLE1") + 
+  ylab("FLE2") + 
+  theme(strip.background = element_rect(fill = NA, colour = NA),
+        strip.text.x = element_text(size = 15)) +
+  scale_color_manual(values=palette)+
+    guides(color = guide_legend(override.aes=list(size=6)))
+```
+

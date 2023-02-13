@@ -36,4 +36,4 @@ Human cellular reprogramming to induced pluripotency is still an inefficient pro
 3. Discussion
 
 ## Dimensionality Reduction
-We reduced dimensionality of our single-cell expression data taking advantage of the Force Layout Embedding (FLE). In our manuscript, we used forceatlas2 (v1.0.3). Since this function was deprecated, we recommend the following Tutorial to compute dimensionality reduction using <i>pegasus</i> <a href="https://nbviewer.jupyter.org/github/broadinstitute/wot/blob/master/notebooks/Notebook-1-FLE-cell_sets-gene_sets.ipynb"><a name="Tutorial FLE">
+We reduced dimensionality of our single-cell expression data taking advantage of the Force Layout Embedding (FLE). In our manuscript, we used forceatlas2 (v1.0.3). Since this function was deprecated, we recommend the following Tutorial to compute dimensionality reduction using <i>pegasus</i> <a href="https://nbviewer.jupyter.org/github/broadinstitute/wot/blob/master/notebooks/Notebook-1-FLE-cell_sets-gene_sets.ipynb">Tutorial FLE</a>

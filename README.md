@@ -19,11 +19,9 @@
 
 
 ## Abstract
-Human cellular reprogramming to induced pluripotency is still an inefficient process and this has long hindered the study of the role of critical intermediate stages. We take advantage of high efficiency reprogramming in microfluidics and temporal multi-omics to identify and resolve distinct sub-populations and their interactions. The combination of secretome analysis and single-cell transcriptomics shows functional extrinsic pathways of protein communication between reprogramming sub-populations and the re-shaping of a permissive extracellular environment. We pinpoint the HGF/MET/STAT3 axis as a potent enhancer of reprogramming, which acts via HGF accumulation within the confined system of microfluidics, and in conventional dishes needs to be supplied exogenously to enhance efficiency. 
-Our data integrate the notion of human cellular reprogramming as a transcription factor-driven process with the concept that it is deeply dependent on extracellular context and cell population determinants. 
+Human cellular reprogramming to induced pluripotency is still an inefficient process, which has hindered studying the role of critical intermediate stages. Here we take advantage of high efficiency reprogramming in microfluidics and temporal multi-omics to identify and resolve distinct sub-populations and their interactions. We perform secretome analysis and single-cell transcriptomics to show functional extrinsic pathways of protein communication between reprogramming sub-populations and the re-shaping of a permissive extracellular environment. We pinpoint the HGF/MET/STAT3 axis as a potent enhancer of reprogramming, which acts via HGF accumulation within the confined system of microfluidics, and in conventional dishes needs to be supplied exogenously to enhance efficiency. Our data suggest that human cellular reprogramming is a transcription factor-driven process that it is deeply dependent on extracellular context and cell population determinants. 
 
 ## Contents of the article
-
 1. Introduction
 
 2. Results
@@ -37,3 +35,5 @@ Our data integrate the notion of human cellular reprogramming as a transcription
     
 3. Discussion
 
+## Dimensionality Reduction
+We reduced dimensionality of our single-cell expression data taking advantage of the Force Layout Embedding (FLE). In our manuscript, we used forceatlas2 (v1.0.3). Since this function was deprecated, we recommend the following Tutorial to compute dimensionality reduction using <i>pegasus</i> <a href="https://nbviewer.jupyter.org/github/broadinstitute/wot/blob/master/notebooks/Notebook-1-FLE-cell_sets-gene_sets.ipynb"><a name="Tutorial FLE">

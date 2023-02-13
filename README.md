@@ -21,6 +21,7 @@
 <li><a href="#abstract">Abstract</a></li>
 <li><a href="#ca">Contents of the article</a></li>
 <li><a href="#dim">Dimensionality Reduction</a></li>
+<li><a href="#traj">Trajectory Inference</a></li>
 
 
 <h2><a name="abstract">Abstract</a></h2>
@@ -41,4 +42,11 @@ Human cellular reprogramming to induced pluripotency is still an inefficient pro
 3. Discussion
 
 <h2><a name="dim">Dimensionality Reduction</a></h2>
-We reduced dimensionality of our single-cell expression data taking advantage of the Force Layout Embedding (FLE). In our manuscript, we used forceatlas2 (v1.0.3). Since this function was deprecated, we recommend the following <a href="https://nbviewer.jupyter.org/github/broadinstitute/wot/blob/master/notebooks/Notebook-1-FLE-cell_sets-gene_sets.ipynb">Tutorial to compute dimensionality reduction using <i>pegasus</i></a>
+We reduced dimensionality of our single-cell gene expression data taking advantage of the Force Layout Embedding (FLE). In our manuscript, we used forceatlas2 (v1.0.3). Since this function was deprecated, we recommend the following <a href="https://nbviewer.jupyter.org/github/broadinstitute/wot/blob/master/notebooks/Notebook-1-FLE-cell_sets-gene_sets.ipynb">Tutorial to compute dimensionality reduction using <i>pegasus</i></a>
+
+
+<h2><a name="traj">Trajectory Inference</a></h2>
+We applied Waddington-OT (optimal transport) to infer trajectories across our data. We followed this <a href="https://nbviewer.jupyter.org/github/broadinstitute/wot/blob/master/notebooks/Notebook-2-compute-transport-maps.ipynb">Tutorial</a> to apply it to our single-cell gene expression data.
+
+
+

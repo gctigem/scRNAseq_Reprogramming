@@ -18,14 +18,15 @@
 <sup>*</sup> These authors jointly supervised this work: Davide Cacchiarelli, Nicola Elvassore </br>
 
 ## Table of content
-<li><a href="## Abstract">Abstract</a></li>
+<li><a href="#abstract">Abstract</a></li>
+<li><a href="#ca">Contents of the article</a></li>
 <li><a href="#dim">Dimensionality Reduction</a></li>
 
 
-## Abstract
+<h2><a name="abstract">Abstract</a></h2>
 Human cellular reprogramming to induced pluripotency is still an inefficient process, which has hindered studying the role of critical intermediate stages. Here we take advantage of high efficiency reprogramming in microfluidics and temporal multi-omics to identify and resolve distinct sub-populations and their interactions. We perform secretome analysis and single-cell transcriptomics to show functional extrinsic pathways of protein communication between reprogramming sub-populations and the re-shaping of a permissive extracellular environment. We pinpoint the HGF/MET/STAT3 axis as a potent enhancer of reprogramming, which acts via HGF accumulation within the confined system of microfluidics, and in conventional dishes needs to be supplied exogenously to enhance efficiency. Our data suggest that human cellular reprogramming is a transcription factor-driven process that it is deeply dependent on extracellular context and cell population determinants. 
 
-## Contents of the article
+<h2><a name="ca">Contents of the article</a></h2>
 1. Introduction
 
 2. Results

@@ -48,5 +48,6 @@ We reduced dimensionality of our single-cell gene expression data taking advanta
 <h2><a name="traj">Trajectory Inference</a></h2>
 We applied Waddington-OT (optimal transport) to infer trajectories across our data. We followed this <a href="https://nbviewer.jupyter.org/github/broadinstitute/wot/blob/master/notebooks/Notebook-2-compute-transport-maps.ipynb">Tutorial</a> to apply it to our single-cell gene expression data.
 
+<h2><a name="traj">Other</a></h2>
 
 
